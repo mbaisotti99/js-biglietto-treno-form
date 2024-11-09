@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrenRitardia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 class="text-center my-5">Calcola il ritardo del tuo treno</h1>
+
+        <div class="row">
+
+            <div class="col-12 col-md-6">
+
+                <form>
+                    <div class="row">
+                        <!-- NOME -->
+                        <div class="col-4"> 
+                            <label for="name" class="form-label">Nome e Cognome</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+    
+                        <!--KM percorsi-->
+                        <div class="col-4">
+                            <label for="kms" class="form-label">KM Percorsi</label>
+                            <input type="number" id="kms" class="form-control" required>
+                        </div>
+    
+                        <!-- Età -->
+                        <div class="col-4">
+                            <label for="age" class="form-label">La tua Età</label>
+                            <select class="form-select" name="maggio" id="age">
+                                <option value="adult">Maggiorenne</option>
+                                <option value="minor">Minorenne</option>
+                            </select>
+                        </div>
+
+                        <div class="col-6 text-center my-5">
+                            <label for="send"></label>
+                            <input type="submit" class="btn btn-primary" id="send" value="Calcola"></input>
+                        </div>
+
+                        <div class="col-6 text-center my-5">
+                            <button type="reset" class="btn btn-secondary" id="clear">Reset</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="col-12 col-md-6">
+
+                <h2 class="text-center mt-5">IL TUO BIGLIETTO</h2>
+                
+                <h3 class="mt-3">Dettaglio Passeggeri</h3>
+                
+                <div class="row row-cols-5 g-0 mt-4">
+
+                    <div class="col">
+                        <div class="card text-bg-secondary">
+                            <div class="card-header"> Nome </div>
+                            <div class="card-body">
+                                <p class="card-text" id="passName"></p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-header"> Offerta</div>
+                            <div class="card-body">
+                                <p class="card-text" id="passOff"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-header"> Classe</div>
+                            <div class="card-body">
+                                <p class="card-text" id="passClass"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-header"> Codice CP</div>
+                            <div class="card-body">
+                                <p class="card-text" id="passTick"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-header"> Costo </div>
+                            <div class="card-body">
+                                <p class="card-text" id="passCost"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
